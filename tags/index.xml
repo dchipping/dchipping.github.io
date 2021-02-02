@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>design</title>
+      <link>https://dchipping.github.io/tags/design/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dchipping.github.io/tags/design/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>engineering</title>
+      <link>https://dchipping.github.io/tags/engineering/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dchipping.github.io/tags/engineering/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Space</title>
+      <link>https://dchipping.github.io/tags/space/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dchipping.github.io/tags/space/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>css</title>
       <link>https://dchipping.github.io/tags/css/</link>
@@ -50,15 +77,6 @@
       <pubDate>Sun, 18 Mar 2018 12:13:32 +0530</pubDate>
       
       <guid>https://dchipping.github.io/tags/procrastinating/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Space</title>
-      <link>https://dchipping.github.io/tags/space/</link>
-      <pubDate>Sun, 18 Mar 2018 12:13:30 +0530</pubDate>
-      
-      <guid>https://dchipping.github.io/tags/space/</guid>
       <description></description>
     </item>
     

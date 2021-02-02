@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Space on Daniel Chipping</title>
-    <link>https://dchipping.github.io/tags/space/</link>
-    <description>Recent content in Space on Daniel Chipping</description>
+    <title>design on Daniel Chipping</title>
+    <link>https://dchipping.github.io/tags/design/</link>
+    <description>Recent content in design on Daniel Chipping</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/tags/space/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/tags/design/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The Basics of Rocket Engine Plumbing</title>
       <link>https://dchipping.github.io/posts/rockets/</link>
@@ -16,18 +16,6 @@
       <guid>https://dchipping.github.io/posts/rockets/</guid>
       <description>As I&amp;rsquo;ve been reading more about software design patterns, I recalled a bit of reading I did during unviersity on rocket engines cycles and how the topic could be thought of in similar terms to a design pattern. The concept of a program&amp;rsquo;s pattern refering to a well recognised way of solving a particular problem. Businesses typically like to implement them in their software designs due to the benefits:
  A new but experienced engineer can draw on their existing knowledge of patterns and therefore quickly understand the solution being used Common patterns often have their advantages and disadvantages well explored, reducing time spent testing system behaviour Adhering to a design pattern often forces a reduction in uncessary system complexity  Patterns can infact be applied to almost any problem within an engineering context but I thought I&amp;rsquo;d take the oppurtunity to jot down what I gathered about the various patterns used to design rocket engines.</description>
-    </item>
-    
-    <item>
-      <title>Fearlessness: How to Stop Running from Space</title>
-      <link>https://dchipping.github.io/posts/post-2/</link>
-      <pubDate>Sun, 18 Mar 2018 12:13:30 +0530</pubDate>
-      
-      <guid>https://dchipping.github.io/posts/post-2/</guid>
-      <description>We spend our days filling in every available space, cramming in more tasks, responding to messages, checking social media and online sites, watching videos.
-We are afraid of empty space in our lives.
-The result is often a continual busyness, constant distraction and avoidance, lack of focus, lack of satisfaction with our lives.
-We run from silence. We run from the spaces between tasks and appointments. We run from solitude and stillness.</description>
     </item>
     
   </channel>
