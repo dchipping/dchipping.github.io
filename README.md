@@ -1,3 +1,3 @@
 # dchipping.github.io
 
-[Currently Serving](https://github.com/dchipping/simple-blog)
+Personal website: [currently serving](https://github.com/dchipping/my-bPelog)
