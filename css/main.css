@@ -180,6 +180,19 @@ ul.flat li {
     margin-left: 0;
 }
 
+ul.flat-icons {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    list-style-position: inside;
+}
+
+ul.flat-icons li {
+    display: block;
+    list-style: none;
+    margin-left: 0;
+}
+
 .prevent-collapse {
     min-height: .1rem
 }
@@ -270,7 +283,7 @@ ul {
 .header nav li {
     display: inline-block;
     list-style: none;
-    margin: 0 30px 0 0;
+    margin: 0 20px 0 0;
 }
     .header nav.social a {
         color: #333;
@@ -455,8 +468,13 @@ ul {
         margin-top: 10px;
     }
 
+    .header .avatar {
+        float: left;
+        margin: -7px 20px 0 0;
+    }
+
     .header .nav.social li {
-        margin: 0;
+        margin: 5;
     }
     .header .nav li {
         margin: 0 10px 0 0;
@@ -483,4 +501,11 @@ ul {
         font-size: 0.875em;
         line-height: 1.4em;
     }
+}
+
+code.has-jax {
+    -webkit-font-smoothing: antialiased;
+    background: inherit !important;
+    border: none !important;
+    font-size: 100%;
 }
