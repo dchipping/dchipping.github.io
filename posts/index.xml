@@ -7,19 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://dchipping.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rendering real-time physics: commodity physics engines</title>
+      <link>https://dchipping.github.io/posts/physics-engines/</link>
+      <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dchipping.github.io/posts/physics-engines/</guid>
+      <description>Augmented reality in action &amp;ndash; a fast, portable and realistic physics engine is needed to calculate the collisions with complex surfaces in the real world (Lightship SDK)
+  Curiosity has recently led me down the road of extended reality (XR), a catch-all term encompassing: Augmented Reality (AR), Mixed Reality (MR) and Virtual Reality (VR). Development of XR experiences interestingly uses much of the same tooling used to create video games, often using game engines like Unity to build and leverage technology in order to create virtual environments.</description>
+    </item>
     
     <item>
       <title>The Basics of Rocket Engine Plumbing</title>
       <link>https://dchipping.github.io/posts/rockets/</link>
-      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dchipping.github.io/posts/rockets/</guid>
-      <description>As I&amp;rsquo;ve been reading more about software design patterns, I recalled a bit of reading I did during university on rocket engines cycles and how the topic could be thought of in similar terms to a design pattern. The concept of a program&amp;rsquo;s pattern referring to a well recognised way of solving a particular problem. Businesses typically like to implement them in their software designs due to the benefits:
- A new but experienced engineer can draw on their existing knowledge of patterns and therefore quickly understand the solution being used Common patterns often have their advantages and disadvantages well explored, reducing time spent testing system behaviour Adhering to a design pattern often forces a reduction in unnecessary system complexity  Patterns can infact be applied to almost any problem within an engineering context but I thought I&amp;rsquo;d take the opportunity to jot down what I gathered about the various patterns used to design rocket engines.</description>
+      <description>An &amp;lsquo;artistic&amp;rsquo; rendition of engine cycles
+  As I&amp;rsquo;ve been reading more about software design patterns, I recalled a bit of reading I did during university on rocket engines cycles and how the topic could be thought of in similar terms to a design pattern. The concept of a program&amp;rsquo;s pattern referring to a well recognised way of solving a particular problem. Businesses typically like to implement them in their software designs due to the benefits:</description>
     </item>
     
   </channel>

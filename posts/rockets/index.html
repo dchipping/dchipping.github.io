@@ -4,19 +4,16 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>The Basics of Rocket Engine Plumbing - Daniel Chipping</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta itemprop="name" content="The Basics of Rocket Engine Plumbing">
-<meta itemprop="description" content="An overview of common &#39;patterns&#39; used in rocket engine design.">
-<meta itemprop="datePublished" content="2021-01-30T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2021-01-30T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1907">
-
-
-
-<meta itemprop="keywords" content="rockets,space," /><meta property="og:title" content="The Basics of Rocket Engine Plumbing" />
+<meta itemprop="description" content="An overview of common &#39;patterns&#39; used in rocket engine design."><meta itemprop="datePublished" content="2020-03-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-03-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1910">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="The Basics of Rocket Engine Plumbing" />
 <meta property="og:description" content="An overview of common &#39;patterns&#39; used in rocket engine design." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://dchipping.github.io/posts/rockets/" />
-<meta property="article:published_time" content="2021-01-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-01-30T00:00:00+00:00" />
+<meta property="og:url" content="https://dchipping.github.io/posts/rockets/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-25T00:00:00+00:00" />
+
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="The Basics of Rocket Engine Plumbing"/>
 <meta name="twitter:description" content="An overview of common &#39;patterns&#39; used in rocket engine design."/>
@@ -63,7 +60,7 @@
 			</li>
 			
 			<li>
-				<a href="/tags">Tags</a>
+				<a href="/topics">Topics</a>
 			</li>
 			
 		</ul>
@@ -76,8 +73,8 @@
 				
 					<div class="meta">
 						<div class="date">
-							<span class="day">30</span>
-							<span class="rest">Jan 2021</span>
+							<span class="day">25</span>
+							<span class="rest">Mar 2020</span>
 						</div>
 					</div>
 				
@@ -87,7 +84,13 @@
 			</div>
 					
 			<div class="markdown">
-				<p>As I&rsquo;ve been reading more about <a href="https://www.martinfowler.com/eaaCatalog/">software design patterns</a>, I recalled a bit of reading I did during university on rocket engines cycles and how the topic could be thought of in similar terms to a design pattern. The concept of a program&rsquo;s <em>pattern</em> referring to a well recognised way of solving a particular problem. Businesses typically like to implement them in their software designs due to the benefits:</p>
+				<figure>
+    <img src="/images/schematics.jpg"
+         alt="An &amp;lsquo;artistic&amp;rsquo; rendition of engine cycles"/><figcaption>
+            <p>An &lsquo;artistic&rsquo; rendition of engine cycles</p>
+        </figcaption>
+</figure>
+<p>As I&rsquo;ve been reading more about <a href="https://www.martinfowler.com/eaaCatalog/">software design patterns</a>, I recalled a bit of reading I did during university on rocket engines cycles and how the topic could be thought of in similar terms to a design pattern. The concept of a program&rsquo;s <em>pattern</em> referring to a well recognised way of solving a particular problem. Businesses typically like to implement them in their software designs due to the benefits:</p>
 <ul>
 <li>A new but experienced engineer can draw on their existing knowledge of patterns and therefore quickly understand the solution being used</li>
 <li>Common patterns often have their advantages and disadvantages well explored, reducing time spent testing system behaviour</li>
@@ -99,16 +102,15 @@
 <h2 id="do-rockets-really-have-design-patterns-as-well">Do rockets really have &lsquo;design patterns&rsquo; as well?</h2>
 <figure>
     <img src="https://live.staticflickr.com/65535/48129182836_048a580212_h.jpg"
-         alt="Falcon Heavy&amp;rsquo;s roaring Merlin Engines"/> <figcaption>
+         alt="Falcon Heavy&amp;rsquo;s roaring Merlin Engines"/><figcaption>
             <p>Falcon Heavy&rsquo;s roaring Merlin Engines
                     <a href="https://www.flickr.com/photos/spacex/48129182836/">(SpaceX)</a></p>
         </figcaption>
 </figure>
-
 <p>To achieve high Delta-v’s rocket typically use liquid propellants due to liquid’s high energy density which allows for a more mass efficient rocket over solid propellant alternatives. Although various liquid mixes can be used to power a rocket, in practice bipropellant rockets are the most common meaning the dual use of liquid fuel and liquid oxidiser, which we will focus on.</p>
 <p>Key to utilising liquid fuel’s high energy density is an engine’s ability to consistently supply the combustion chamber with propellants at high pressures and high specific mass flow rates. Rocket engines supply themselves the energy required to do this via feed systems which can be thought of as an engines internal plumbing.</p>
 <blockquote>
-<p>&ldquo;Liquid propellant feed systems consist of piping, a series of valves, provisions for filling and usually also for removing (draining and flushing) the liquid propellants, filters, and control devices to initiate, stop, and regulate their flow and operation&quot;<!-- raw HTML omitted -->
+<p>&ldquo;Liquid propellant feed systems consist of piping, a series of valves, provisions for filling and usually also for removing (draining and flushing) the liquid propellants, filters, and control devices to initiate, stop, and regulate their flow and operation&rdquo;<!-- raw HTML omitted -->
 — <!-- raw HTML omitted -->George P. Sutton, Rocket Propulsion Elements<!-- raw HTML omitted --></p>
 </blockquote>
 <p>These systems are predominantly powered by either high-pressure gas or turbopumps but importantly there is no &lsquo;one size fits all’. Almost every engine has a different feed system, each of which provides its own design benefits and drawbacks, similar to the design pattern analogy drawn on earlier. So let&rsquo;s explore some of the most common feed systems and do a general comparison between them.</p>
@@ -116,12 +118,11 @@
 <p>Pressure-fed engines are the simplest and most reliable feed systems in use. Fundamentally, these systems use a separate supply of very high-pressure gas, usually inert such as helium, to force propellant from its tanks into the combustion chamber. As a result, the plumbing required is simple typically comprising of a gas starting valve, a gas pressure regulator, propellant tanks, propellant valves, feed lines and a high-pressure gas tank.</p>
 <figure>
     <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/ArmadilloAerospace_Pixel_Attempt1_c.jpg"
-         alt="Not your typical engine, Pixel was a pressure-fed Lunar Lander vehicle" width="700"/> <figcaption>
+         alt="Not your typical engine, Pixel was a pressure-fed Lunar Lander vehicle" width="700"/><figcaption>
             <p>Not your typical engine, Pixel was a pressure-fed Lunar Lander vehicle
                     <a href="https://en.wikipedia.org/wiki/Armadillo_Aerospace">(ArmadilloAerospace)</a></p>
         </figcaption>
 </figure>
-
 <p>The system can be simplified further by removing the high-pressure gas tank and instead storing the high-pressure gas at the top of the propellant tanks themselves. This is called a ‘blow-down’ pressure-fed system in contrast to a ‘regulated’ pressure-fed systems described prior. As well as simplifying the design ‘blow-down’ systems often requires less gas and allows for a less inert gases to be used in the system. However, a major downside of the ‘blow-down’ system is that the pressure varies over time. Meaning the propellant flow rate to the combustion chamber decreases over time whereas a ‘regulated’ system does not suffer from such an issue.</p>
 <p>In general pressure-fed engines are the best choice for missions where both the required Delta-v and rocket payload is low. This is due to their best-in-class efficiency, cost and reliability at such mission specifications. During SpaceX&rsquo;s infancy, they opted for a ‘regulated’ pressure-fed system in their <a href="https://en.wikipedia.org/wiki/SpaceX_Kestrel">Kestrel engine</a>, used in the upper stage of the Falcon 1 launch vehicle, crucial for achieving system simplicity and driving down costs.</p>
 <p>For missions with heavier payloads, higher Delta-v’s or both, the engine must generate more thrust which demands an increase in combustion chamber pressure. To produce higher pressures in a pressure-fed system, larger and more reinforced tanks are required which greatly increases the mass of the rocket. This makes pressure-fed systems hard-sells and is why many engine designs turn to turbopump feeds.</p>
@@ -144,12 +145,11 @@
 <p>The gas is then discharged to the atmosphere separately from the combustion chamber. This has the benefit of allowing the turbine flow-path to run in parallel with the combustion chamber flow-path, separating the two functions. As a result, the complexity of the engine is greatly reduced as there is no need to deal with the counter pressure of the exhaust discharging into the combustion chamber.</p>
 <figure>
     <img src="/images/RD-107M.jpg"
-         alt="RD-107 gas-generator engine powers Russia&amp;rsquo;s famous Soyuz rockets" width="400" height="550"/> <figcaption>
+         alt="RD-107 gas-generator engine powers Russia&amp;rsquo;s famous Soyuz rockets" width="400" height="550"/><figcaption>
             <p>RD-107 gas-generator engine powers Russia&rsquo;s famous Soyuz rockets
                     <a href="http://engine.space/">(NPO Energomash)</a></p>
         </figcaption>
 </figure>
-
 <p>Given a gas-generator expands to atmospheric pressure there is a large pressure ratio across the turbine and thus a high available energy per unit mass of flow across the turbine. Combined with an overall efficient turbopump and high thermal operating temperature, a low turbine flow rate can produce a high specific impulse.</p>
 <p>The caveat to this is gas-generator cycles are by definition open cycles, meaning not all propellant that can be burnt in the combustion chamber is. This results in losses in overall specific impulse. Moreover, most gas-generators operate on fuel-rich mixes such that gas temperatures are low enough to allow for use of uncooled turbine blades. This has a knock-on effect on the combustion chamber which balances the effect of a fuel-rich turbine exhaust by changing the combustion chamber’s chemistry, further reducing the total specific impulse.</p>
 <p>Advantages:</p>
@@ -166,12 +166,11 @@
 <p>The expander cycle is in contrast a closed engine cycle meaning all fuel is burnt in the combustion chamber. Cryogenic fuel is pumped around the combustion chamber and nozzle acting as a coolant picking up heat. The fuel once hot, changes phase to a gas and powers the turbine of the turbopump. As well as closing the cycle this design has the added benefit of removing the gas-generator and its accompanying plumbing making the cycle much cheaper and more reliable.</p>
 <figure>
     <img src="http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2018/12/vinci_engine_qualified_in_tests/18939475-1-eng-GB/Vinci_engine_qualified_in_tests_pillars.png"
-         alt="VINCI is a fresh attempt at a high performance Expander Cycle engine" width="700"/> <figcaption>
+         alt="VINCI is a fresh attempt at a high performance Expander Cycle engine" width="700"/><figcaption>
             <p>VINCI is a fresh attempt at a high performance Expander Cycle engine
                     <a href="http://www.esa.int/ESA_Multimedia/Images/2018/12/Vinci_engine_qualified_in_tests">(ESA)</a></p>
         </figcaption>
 </figure>
-
 <p>Several expander cycle engines have been successfully flown in the past with the RL10 engine being the most notable, having flown multiple missions with a very reliable track record. Currently ESA is developing a state-of-the art expander cycle engine called the VINCI which uses two separate turbopumps and a long combustion chamber to capitalise on a larger surface area. This will supposedly allow the VINCI to <a href="https://doi.org/10.1007/s12567-013-0043-8">double the thrust output of the RL10</a>.</p>
 <p>However, the thrust of the expander cycle is limited by the geometry of the rocket engine as a result of the <a href="https://en.wikipedia.org/wiki/Square%E2%80%93cube_law">square-cube law</a>. Meaning increasing the radius by a factor of 2 would increase surface area by a factor of 4 but volume by a factor of 8. As a result, there is a maximum threshold at which there is no longer sufficient surface area to heat enough fuel to drive the turbopump at the required flow rate.</p>
 <p>Advantages:</p>
@@ -188,12 +187,11 @@
 <p>The final notable turbopump engine cycle is the staged combustion cycle, a closed cycle, high performance and high thrust engine cycle that comes with the trade-off of greatly increased complexity. Opposite to gas-generator cycles, the pre-burner and turbine flow-path is in series with the combustion chamber flow-path and thus experiences counter pressures of the exhaust being discharged into the combustion chamber.</p>
 <figure>
     <img src="https://live.staticflickr.com/65535/50703141068_0bdae2bdac_b.jpg"
-         alt="Starship fitted with SpaceX&amp;rsquo;s powerful full-flow staged combustion Raptor Engines" width="700"/> <figcaption>
+         alt="Starship fitted with SpaceX&amp;rsquo;s powerful full-flow staged combustion Raptor Engines" width="700"/><figcaption>
             <p>Starship fitted with SpaceX&rsquo;s powerful full-flow staged combustion Raptor Engines
                     <a href="https://www.flickr.com/photos/spacex/40126461851/">(SpaceX)</a></p>
         </figcaption>
 </figure>
-
 <p>As a result, staged combustion engines have more complex plumbing and more resilient turbines to withstand the higher-pressure engine environment. Moreover, the newly introduced feedback between the pre-burner and combustion chamber makes the engine significantly harder to start-up correctly.</p>
 <p>Full-flow staged combustion cycles are most complex staged combustion cycles but boast the most impressive performance and thrust characteristics of all cycles. SpaceX’s next generation <a href="https://en.wikipedia.org/wiki/SpaceX_Raptor">Raptor rocket engine</a>, which will power the famous Starship to Mars, is a full-flow staged combustion cycle methalox engine.</p>
 <p>Advantages:</p>
@@ -206,14 +204,7 @@
 <li>Performance benefits are at the expense of a high complexity and high cost design</li>
 <li>The additional plumbing involved makes stages engines hard to start-up</li>
 </ul>
-<h2 id="lets-summarise">Let&rsquo;s summarise</h2>
-<figure>
-    <img src="/images/schematics.jpg"
-         alt="Pencilled engines schematics"/> <figcaption>
-            <p>Pencilled engines schematics</p>
-        </figcaption>
-</figure>
-
+<h2 id="thats-it">That&rsquo;s it!</h2>
 <p>It is important to note that feed systems are not limited to those discussed here, hybrids, variations and completely new feed systems are constantly being developed. Electric feed systems such as the one used in <a href="https://www.rocketlabusa.com/electron/">Rocket Lab’s Rutherford engine</a> are examples of this, showing major promise in rivalling incumbent feed system designs over the next decade.</p>
 <p>Otherwise, that&rsquo;s it we&rsquo;ve taken a look at the simplified engineering behind the most common bipropellant feed systems and evaluated the various engineering trade-offs between each.</p>
 
@@ -221,14 +212,6 @@
 
 			<div class="tags">
 				
-					
-						<ul class="flat">
-							
-							<li><a href="/tags/rockets">rockets</a></li>
-							
-							<li><a href="/tags/space">space</a></li>
-							
-						</ul>
 					
 				
 			</div><div id="disqus_thread"></div>
@@ -253,8 +236,8 @@
 	<div class="footer wrapper">
 	<nav class="nav">
 		<div>
-			Last updated: May 2022 | 
-			View the source on my <a href="https://github.com/dchipping/my-blog">GitHub</a>
+			Last updated: Jan 2024 | 
+			View the source on my <a href="https://github.com/dchipping/dchipping.github.io">GitHub</a>
 		</div>
 	</nav>
 

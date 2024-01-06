@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://dchipping.github.io/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/topics/physics/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dchipping.github.io/posts/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dchipping.github.io/tags/rockets/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dchipping.github.io/tags/space/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dchipping.github.io/tags/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/posts/physics-engines/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/topics/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/topics/videogames/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/topics/vr/</loc>
+    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/topics/propulsion/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/topics/space/</loc>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dchipping.github.io/posts/rockets/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2020-03-25T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dchipping.github.io/about/</loc>
+  </url><url>
+    <loc>https://dchipping.github.io/projects/</loc>
   </url>
-  
 </urlset>
