@@ -9,7 +9,7 @@
     <copyright>© Copyright notice</copyright>
     <lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Rendering real-time physics: commodity physics engines</title>
+      <title>Rendering real-time physics: video game physics engines</title>
       <link>https://dchipping.github.io/posts/physics-engines/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
       
@@ -35,7 +35,7 @@
       
       <guid>https://dchipping.github.io/about/</guid>
       <description>Hello! I&amp;rsquo;m Daniel, nice to meet 👋
-This is my personal site sporadically updated with a bits of writing on this and that. Writing is the best method of facilitating critical thinking and a necessary part of any first principles approach.
+This is my personal site, sporadically updated with a bits of writing on this and that. Writing is the best method I&amp;rsquo;ve found for promoting critical thinking, particularly when seeking a first principles approach.
 Domain-wise, I&amp;rsquo;m interested in exploring the intersection of highly embodied hardware systems (systems that are highly aware of, and can finely interact with their surroundings/environment) and systems that use on-board computing, networking and software to facilitate more intelligent behaviour.</description>
     </item>
     

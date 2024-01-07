@@ -497,8 +497,10 @@ ul {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     .header .nav.social {
+        /* visibility: hidden; */
+        display: none;
         min-width: auto;
         margin: 0;
     }
@@ -507,6 +509,9 @@ ul {
         margin-top: 10px;
         font-size: 0.875em;
         line-height: 1.4em;
+    }
+    .footer.wrapper .nav {
+        text-align: center;
     }
 }
 
