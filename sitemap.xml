@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dchipping.github.io/topics/bits/</loc>
-    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
+    <loc>https://dchipping.github.io/posts/features/</loc>
+    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dchipping.github.io/</loc>
+    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/posts/</loc>
+    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dchipping.github.io/topics/bits/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dchipping.github.io/topics/gaming/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dchipping.github.io/topics/physics/</loc>
-    <lastmod>2020-09-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dchipping.github.io/posts/</loc>
     <lastmod>2020-09-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dchipping.github.io/posts/physics-engines/</loc>

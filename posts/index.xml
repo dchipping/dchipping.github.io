@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 05 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computer Vision 101: Features</title>
+      <link>https://dchipping.github.io/posts/features/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dchipping.github.io/posts/features/</guid>
+      <description>What is a &amp;lsquo;feature&amp;rsquo; in the context of computer vision? Put concisely it is a visually interesting part of an image.
+  3 features are identified and matched between images
+  The OpenCV docs use the analogue of piecing a jigsaw puzzle together to highlight the intuition behind features. The idea being in order to connect two pieces together, the puzzle players needs to identify visual features between tiles that might help them relate any two given tiles (often with some additional locking constraint on the piece edges).</description>
+    </item>
+    
     <item>
       <title>Rendering real-time physics: video game physics engines</title>
       <link>https://dchipping.github.io/posts/physics-engines/</link>

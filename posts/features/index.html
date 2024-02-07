@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Computer Vision 101: Features - Daniel Chipping</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="Computer Vision 101: Features">
+<meta itemprop="description" content="Understanding the primitives used in most computer vision algorithms."><meta itemprop="datePublished" content="2021-01-30T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-01-30T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1022">
+<meta itemprop="keywords" content="engineering,vision," /><meta property="og:title" content="Computer Vision 101: Features" />
+<meta property="og:description" content="Understanding the primitives used in most computer vision algorithms." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dchipping.github.io/posts/features/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-01-30T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Computer Vision 101: Features"/>
+<meta name="twitter:description" content="Understanding the primitives used in most computer vision algorithms."/>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" media="screen" href="https://dchipping.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://dchipping.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://dchipping.github.io/css/dark.css" />
+
+	<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+		<script src="https://dchipping.github.io/js/main.js"></script>
+	
+</head>
+
+<body>
+	<div class="container wrapper">
+		<div class="header">
+	
+		<div class="avatar">
+			<a href="https://dchipping.github.io/">
+				<img src="https://avatars.githubusercontent.com/u/57810107" alt="Daniel Chipping" />
+			</a>
+		</div>
+	
+	<h1 class="site-title"><a href="https://dchipping.github.io/">Daniel Chipping</a></h1>
+	<div class="site-description"><p>Exploring bits 💻 + atoms ⚛️  (one seldom post at a time!)</p><nav class="nav social">
+			<ul class="flat-icons"><li><a href="https://twitter.com/daniel_chipping" title="Twitter"><i data-feather="twitter"></i></a></li><li><a href="https://www.linkedin.com/in/danielchipping/" title="LinkedIn"><i data-feather="linkedin"></i></a></li><li><a href="https://github.com/dchipping" title="Github"><i data-feather="github"></i></a></li><li><a href="#" class="scheme-toggle" id="scheme-toggle"></a></li></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">Home</a>
+			</li>
+			
+			<li>
+				<a href="/posts">All posts</a>
+			</li>
+			
+			<li>
+				<a href="/about">About</a>
+			</li>
+			
+			<li>
+				<a href="/topics">Topics</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		<div class="post">
+			<div class="post-header">
+				
+					<div class="meta">
+						<div class="date">
+							<span class="day">30</span>
+							<span class="rest">Jan 2021</span>
+						</div>
+					</div>
+				
+				<div class="matter">
+					<h1 class="title">Computer Vision 101: Features</h1>
+				</div>
+			</div>
+					
+			<div class="markdown">
+				<p>What is a &lsquo;feature&rsquo; in the context of computer vision? Put concisely it is a <em>visually interesting</em> part of an image.</p>
+<figure>
+    <img src="/images/feature-matching.png"
+         alt="3 features are identified and matched between images" width="800"/><figcaption>
+            <p>3 features are identified and matched between images</p>
+        </figcaption>
+</figure>
+<p>The <a href="https://docs.opencv.org/4.x/df/d54/tutorial_py_features_meaning.html">OpenCV docs</a> use the analogue of piecing a jigsaw puzzle together to highlight the intuition behind features. The idea being in order to connect two pieces together, the puzzle players needs to identify visual features between tiles that might help them relate any two given tiles (often with some additional locking constraint on the piece edges).</p>
+<p>This process is abstract, instantaneous and unconscious for the player, but on inspection is actually a sequential and codify-able process:</p>
+<ol>
+<li>
+<p><strong>Detect</strong> something visually interesting on the tile. For example, the sudden change in colour of a building contrasted by the blue sky horizon above it.</p>
+</li>
+<li>
+<p><strong>Describe</strong> the visual feature. This often means looking locally around this visually interesting point. Is there anything that can uniquely describe the visual feature? For example, the angle of the roof relative to the puzzle piece, the colour of the roof, or even the amount of contrast between the roof and sky.</p>
+</li>
+<li>
+<p><strong>Associate</strong> or match the current feature&rsquo;s description (a descriptor) with descriptions generated from  visual features on other puzzle tiles. To a puzzle player this would mean looking all the unmatched pieces' descriptors and then ranking them against the current feature&rsquo;s description based on similarity. For example, if two pieces show a top of a building behind a blue sky horizon at both at slightly different focal lengths then they are likely to be puzzle piece neighbours.</p>
+</li>
+</ol>
+<p>This process is almost identical for computer vision tasks except the objective is often to find visual descriptors that overlap between images rather than logical continuations of two descriptors. Nonetheless, this analogy acts as a nice construct to view a typical visual feature processing pipeline:</p>
+<ol>
+<li>Feature Detection (identify a feature)</li>
+<li>Feature Description (create a descriptor that describes the local area around the feature)</li>
+<li>Feature Association (go through all descriptors pairwise and match pairs based on description similarity)</li>
+</ol>
+<p>Why do all this? Well similar to how you can build a puzzle based on feature associations between puzzle pieces, you can build an understanding of the world based on feature associations between images. For example, analysing how one feature has moved from one frame to another allows you to the determine the relative or absolute position of an object in the real world and even infer its future position.</p>
+<h2 id="feature-detection">Feature Detection</h2>
+<figure>
+    <img src="/images/features.png"
+         alt="Edges, Corners, Blobs and Ridges are 4 common &amp;lsquo;interest points&amp;rsquo; feature detectors look for" width="800"/><figcaption>
+            <p>Edges, Corners, Blobs and Ridges are 4 common &lsquo;interest points&rsquo; feature detectors look for</p>
+        </figcaption>
+</figure>
+<p>What to look for when creating a feature? Common visual features include:</p>
+<ul>
+<li><strong>Edges</strong>, formally these are areas of an image where noticeable discontinuities between pixels exist. The &lsquo;edge&rsquo; being the curve drawn through the border of these discontinuities. Various mathematical methods exist to identify borders of discontinuities including Sobel and Canny edge detectors. The <a href="https://en.wikipedia.org/wiki/Sobel_operator">Sobel detector</a> is one of the simplest edge detection methods, where a pair of Sobel kernels are convolved in both X and Y directions &ndash; the Sobel kernel effectively takes the difference in pixel values on either side of the convolved patch of the image to provide an &lsquo;edge score&rsquo; in the X and Y directions. The <a href="https://en.wikipedia.org/wiki/Canny_edge_detector">Canny detector</a> builds on the output of a Sobel kernel by combining Non-Maximum Suppression and Hysteresis Thresholding.</li>
+</ul>
+<figure>
+    <img src="/images/edge-table.png"
+         alt="Discontinuity in value between greyscale pixels create an identifiable yellow &amp;lsquo;edge&amp;rsquo;" width="400"/><figcaption>
+            <p>Discontinuity in value between greyscale pixels create an identifiable yellow &lsquo;edge&rsquo;</p>
+        </figcaption>
+</figure>
+<ul>
+<li><strong>Corners</strong> are typically found at the intersection of two well-defined edges (in 2D space). The <a href="https://www.ri.cmu.edu/pub_files/pub4/moravec_hans_1980_1/moravec_hans_1980_1.pdf">Moravec detector</a> is the simplest corner detection approach, where each part of an image is compared with neighbouring image patches for similarity &ndash; if a corner is present it will look quite different to neighbouring image patches, whereas an edge will have a high similarity as it is just a  continuation of neighbouring image patches. The <a href="https://en.wikipedia.org/wiki/Harris_corner_detector">Harris detector</a> further builds on the Moravec detector by using a Gaussian window, omni-directionality via a Taylor series expansions (vs. up, down, left, right of Moravec) and eigenvalue analysis for detecting edge intensity.</li>
+</ul>
+<figure>
+    <img src="/images/corners-moravec.png"
+         alt="Two well-defined edges meet to form a corner. Measuring the similarity of an image patch vs. its neighbouring image patches can discriminate a corner from and edge." width="400"/><figcaption>
+            <p>Two well-defined edges meet to form a corner. Measuring the similarity of an image patch vs. its neighbouring image patches can discriminate a corner from and edge.
+                    <a href="https://vincmazet.github.io/bip/detection/corners.html">(Vincent Mazet)</a></p>
+        </figcaption>
+</figure>
+<ul>
+<li><strong>Blobs</strong> despite their ambiguous name are just a contiguous group of pixels which share a common property such as colour/intensity value (in case of greyscale). One of the most frequently used approaches builds on <em>differential</em> edge detection methods, specifically using the <a href="https://youtu.be/zItstOggP7M?feature=shared">Scale-Normalised Laplacian of Gaussian</a>. By combining the noise smoothening of a Gaussian and the 2nd derivative of an image (the change of intensity change), you can obtain a 2D-map of blob edge response. When this map is normalised with by the Gaussian&rsquo;s σ value, the detection of a maxima/minima indicates the location of a blob an its relative scale to σ. However, since the σ value of Gaussian used is correlated to the size/scale of blob, larger σ values (more blur) are needed to detect large blobs and vice versa for smaller blobs (less blur). To counter this several σ values can be tested where new responses indicate new blobs and at different sizes, this is often referred to as a Multi-Scale Laplacian of Gaussian.</li>
+</ul>
+<figure>
+    <img src="/images/sigma-blob.png"
+         alt="As σ gets larger, blobs of larger size are detected &amp;ndash; Scale-space representation" width="600"/><figcaption>
+            <p>As σ gets larger, blobs of larger size are detected &ndash; Scale-space representation</p>
+        </figcaption>
+</figure>
+<ul>
+<li><strong>Ridges</strong>, unlike edges, are found when the intensity of an image peaks. For example, the ridge on the top of a mountain range when seen top-down from satellite image. In fact common ridge detection setting include detecting roads in aerial images, blood vessels in retinal images, patterns in fingerprints, crack detection amongst other applications. Most ridge detectors use some form of <a href="https://imt-mines-ales.hal.science/hal-03353145/document">Hessian matrix analysis</a> where the 2nd derivative of an image (the change of intensity) acts as the inputs to the Hessian. As the Hessian describes information about the curves of image intensity, the eigenvalues and eigenvectors can be analysed to detect a rapid change of gradient &ndash; indicative of passing over a ridge.</li>
+</ul>
+<figure>
+    <img src="/images/ridges.png"
+         alt="Typical examples of images where ridge detection is favoured" width="600"/><figcaption>
+            <p>Typical examples of images where ridge detection is favoured</p>
+        </figcaption>
+</figure>
+<p>Various other features exist such as Texture features, Optical flow features etc. but on inspection often build on the primitives of Edges, Corners, Blobs and Ridges.</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+			</div>
+
+			<div class="tags">
+				
+					
+						<ul class="flat">
+							
+							<li><a href="/topics/engineering">engineering</a></li>
+							
+							<li><a href="/topics/vision">vision</a></li>
+							
+						</ul>
+					
+				
+			</div><div id="disqus_thread"></div>
+<script type="text/javascript">
+	(function () {
+		var isDisabled = true
+		
+		
+		if (window.location.hostname == "localhost" || isDisabled == true)
+			return;
+
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		var disqus_shortname = 'danielchipping';
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+
+
+</div>
+	</div>
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>
+			Last updated: Feb 2024 | 
+			View the source on my <a href="https://github.com/dchipping/dchipping.github.io">GitHub</a>
+		</div>
+	</nav>
+
+</div>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-123-45', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script>feather.replace()</script>
+</body>
+</html>
