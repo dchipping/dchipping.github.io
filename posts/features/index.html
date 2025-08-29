@@ -3,20 +3,24 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Computer Vision 101: Features - Daniel Chipping</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta itemprop="name" content="Computer Vision 101: Features">
-<meta itemprop="description" content="Understanding the primitives used in most computer vision algorithms."><meta itemprop="datePublished" content="2021-01-30T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2021-01-30T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1022">
-<meta itemprop="keywords" content="engineering,vision," /><meta property="og:title" content="Computer Vision 101: Features" />
-<meta property="og:description" content="Understanding the primitives used in most computer vision algorithms." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://dchipping.github.io/posts/features/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-01-30T00:00:00+00:00" />
-<meta property="article:modified_time" content="2021-01-30T00:00:00+00:00" />
+	
+  <meta itemprop="name" content="Computer Vision 101: Features">
+  <meta itemprop="description" content="Understanding the primitives used in most computer vision algorithms.">
+  <meta itemprop="datePublished" content="2021-01-30T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2021-01-30T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1022"><meta property="og:url" content="https://dchipping.github.io/posts/features/">
+  <meta property="og:site_name" content="Daniel Chipping">
+  <meta property="og:title" content="Computer Vision 101: Features">
+  <meta property="og:description" content="Understanding the primitives used in most computer vision algorithms.">
+  <meta property="og:locale" content="en_uk">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-01-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2021-01-30T00:00:00+00:00">
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Computer Vision 101: Features"/>
-<meta name="twitter:description" content="Understanding the primitives used in most computer vision algorithms."/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Computer Vision 101: Features">
+  <meta name="twitter:description" content="Understanding the primitives used in most computer vision algorithms.">
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://dchipping.github.io/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://dchipping.github.io/css/main.css" />
@@ -101,7 +105,7 @@
 <p><strong>Describe</strong> the visual feature. This often means looking locally around this visually interesting point. Is there anything that can uniquely describe the visual feature? For example, the angle of the roof relative to the puzzle piece, the colour of the roof, or even the amount of contrast between the roof and sky.</p>
 </li>
 <li>
-<p><strong>Associate</strong> or match the current feature&rsquo;s description (a descriptor) with descriptions generated from  visual features on other puzzle tiles. To a puzzle player this would mean looking all the unmatched pieces' descriptors and then ranking them against the current feature&rsquo;s description based on similarity. For example, if two pieces show a top of a building behind a blue sky horizon at both at slightly different focal lengths then they are likely to be puzzle piece neighbours.</p>
+<p><strong>Associate</strong> or match the current feature&rsquo;s description (a descriptor) with descriptions generated from  visual features on other puzzle tiles. To a puzzle player this would mean looking all the unmatched pieces&rsquo; descriptors and then ranking them against the current feature&rsquo;s description based on similarity. For example, if two pieces show a top of a building behind a blue sky horizon at both at slightly different focal lengths then they are likely to be puzzle piece neighbours.</p>
 </li>
 </ol>
 <p>This process is almost identical for computer vision tasks except the objective is often to find visual descriptors that overlap between images rather than logical continuations of two descriptors. Nonetheless, this analogy acts as a nice construct to view a typical visual feature processing pipeline:</p>
@@ -114,18 +118,18 @@
 <h2 id="feature-detection">Feature Detection</h2>
 <figure>
     <img src="/images/features.png"
-         alt="Edges, Corners, Blobs and Ridges are 4 common &amp;lsquo;interest points&amp;rsquo; feature detectors look for" width="800"/><figcaption>
+         alt="Edges, Corners, Blobs and Ridges are 4 common &lsquo;interest points&rsquo; feature detectors look for" width="800"/><figcaption>
             <p>Edges, Corners, Blobs and Ridges are 4 common &lsquo;interest points&rsquo; feature detectors look for</p>
         </figcaption>
 </figure>
 <p>What to look for when creating a feature? Common visual features include:</p>
 <ul>
-<li><strong>Edges</strong>, formally these are areas of an image where noticeable discontinuities between pixels exist. The &lsquo;edge&rsquo; being the curve drawn through the border of these discontinuities. Various mathematical methods exist to identify borders of discontinuities including Sobel and Canny edge detectors. The <a href="https://en.wikipedia.org/wiki/Sobel_operator">Sobel detector</a> is one of the simplest edge detection methods, where a pair of Sobel kernels are convolved in both X and Y directions &ndash; the Sobel kernel effectively takes the difference in pixel values on either side of the convolved patch of the image to provide an &lsquo;edge score&rsquo; in the X and Y directions. The <a href="https://en.wikipedia.org/wiki/Canny_edge_detector">Canny detector</a> builds on the output of a Sobel kernel by combining Non-Maximum Suppression and Hysteresis Thresholding.</li>
+<li><strong>Edges</strong>, formally these are areas of an image where noticeable discontinuities between pixels exist. The &rsquo;edge&rsquo; being the curve drawn through the border of these discontinuities. Various mathematical methods exist to identify borders of discontinuities including Sobel and Canny edge detectors. The <a href="https://en.wikipedia.org/wiki/Sobel_operator">Sobel detector</a> is one of the simplest edge detection methods, where a pair of Sobel kernels are convolved in both X and Y directions &ndash; the Sobel kernel effectively takes the difference in pixel values on either side of the convolved patch of the image to provide an &rsquo;edge score&rsquo; in the X and Y directions. The <a href="https://en.wikipedia.org/wiki/Canny_edge_detector">Canny detector</a> builds on the output of a Sobel kernel by combining Non-Maximum Suppression and Hysteresis Thresholding.</li>
 </ul>
 <figure>
     <img src="/images/edge-table.png"
-         alt="Discontinuity in value between greyscale pixels create an identifiable yellow &amp;lsquo;edge&amp;rsquo;" width="400"/><figcaption>
-            <p>Discontinuity in value between greyscale pixels create an identifiable yellow &lsquo;edge&rsquo;</p>
+         alt="Discontinuity in value between greyscale pixels create an identifiable yellow &rsquo;edge&#39;" width="400"/><figcaption>
+            <p>Discontinuity in value between greyscale pixels create an identifiable yellow &rsquo;edge'</p>
         </figcaption>
 </figure>
 <ul>
@@ -143,7 +147,7 @@
 </ul>
 <figure>
     <img src="/images/sigma-blob.png"
-         alt="As σ gets larger, blobs of larger size are detected &amp;ndash; Scale-space representation" width="600"/><figcaption>
+         alt="As σ gets larger, blobs of larger size are detected &ndash; Scale-space representation" width="600"/><figcaption>
             <p>As σ gets larger, blobs of larger size are detected &ndash; Scale-space representation</p>
         </figcaption>
 </figure>
@@ -157,8 +161,6 @@
         </figcaption>
 </figure>
 <p>Various other features exist such as Texture features, Optical flow features etc. but on inspection often build on the primitives of Edges, Corners, Blobs and Ridges.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 
 			</div>
 
@@ -174,46 +176,18 @@
 						</ul>
 					
 				
-			</div><div id="disqus_thread"></div>
-<script type="text/javascript">
-	(function () {
-		var isDisabled = true
-		
-		
-		if (window.location.hostname == "localhost" || isDisabled == true)
-			return;
+			</div>
 
-		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-		var disqus_shortname = 'danielchipping';
-		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	})();
-</script>
-
-
-</div>
+		</div>
 	</div>
 	<div class="footer wrapper">
 	<nav class="nav">
 		<div>
-			Last updated: Dec 2024 | 
+			Last updated: Aug 2025 | 
 			View the source on my <a href="https://github.com/dchipping/dchipping.github.io">GitHub</a>
 		</div>
 	</nav>
 
-</div>
-
-
-<script type="application/javascript">
-var doNotTrack = false;
-if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-	ga('create', 'UA-123-45', 'auto');
-	
-	ga('send', 'pageview');
-}
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
-<script>feather.replace()</script>
+</div><script>feather.replace()</script>
 </body>
 </html>

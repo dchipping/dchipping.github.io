@@ -4,62 +4,45 @@
     <title>Daniel Chipping</title>
     <link>https://dchipping.github.io/</link>
     <description>Recent content on Daniel Chipping</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-uk</language>
     <copyright>© Copyright notice</copyright>
-    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://dchipping.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://dchipping.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Computer Vision 101: Features</title>
       <link>https://dchipping.github.io/posts/features/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://dchipping.github.io/posts/features/</guid>
-      <description>What is a &amp;lsquo;feature&amp;rsquo; in the context of computer vision? Put concisely it is a visually interesting part of an image.
-  3 features are identified and matched between images
-  The OpenCV docs use the analogue of piecing a jigsaw puzzle together to highlight the intuition behind features. The idea being in order to connect two pieces together, the puzzle players needs to identify visual features between tiles that might help them relate any two given tiles (often with some additional locking constraint on the piece edges).</description>
+      <description>&lt;p&gt;What is a &amp;lsquo;feature&amp;rsquo; in the context of computer vision? Put concisely it is a &lt;em&gt;visually interesting&lt;/em&gt; part of an image.&lt;/p&gt;&#xA;&lt;figure&gt;&#xD;&#xA;    &lt;img src=&#34;https://dchipping.github.io/images/feature-matching.png&#34;&#xD;&#xA;         alt=&#34;3 features are identified and matched between images&#34; width=&#34;800&#34;/&gt;&lt;figcaption&gt;&#xD;&#xA;            &lt;p&gt;3 features are identified and matched between images&lt;/p&gt;&#xD;&#xA;        &lt;/figcaption&gt;&#xD;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;The &lt;a href=&#34;https://docs.opencv.org/4.x/df/d54/tutorial_py_features_meaning.html&#34;&gt;OpenCV docs&lt;/a&gt; use the analogue of piecing a jigsaw puzzle together to highlight the intuition behind features. The idea being in order to connect two pieces together, the puzzle players needs to identify visual features between tiles that might help them relate any two given tiles (often with some additional locking constraint on the piece edges).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Rendering real-time physics: video game physics engines</title>
       <link>https://dchipping.github.io/posts/physics-engines/</link>
       <pubDate>Sat, 05 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://dchipping.github.io/posts/physics-engines/</guid>
-      <description>Augmented reality in action &amp;ndash; a fast, portable and realistic physics engine is needed to calculate the collisions with complex surfaces in the real world (Lightship SDK)
-  Curiosity has recently led me down the road of extended reality (XR), a catch-all term encompassing: Augmented Reality (AR), Mixed Reality (MR) and Virtual Reality (VR). Development of XR experiences interestingly uses much of the same tooling used to create video games, often using game engines like Unity to build and leverage technology in order to create virtual environments.</description>
+      <description>&lt;figure&gt;&#xD;&#xA;    &lt;img src=&#34;https://dchipping.github.io/images/dice.png&#34;&#xD;&#xA;         alt=&#34;Augmented reality in action &amp;ndash; a fast, portable and realistic physics engine is needed to calculate the collisions with complex surfaces in the real world&#34; width=&#34;800&#34;/&gt;&lt;figcaption&gt;&#xD;&#xA;            &lt;p&gt;Augmented reality in action &amp;ndash; a fast, portable and realistic physics engine is needed to calculate the collisions with complex surfaces in the real world&#xD;&#xA;                    &lt;a href=&#34;https://storage.googleapis.com/lightship-media/videos/ardk/dice-redo.mp4&#34;&gt;(Lightship SDK)&lt;/a&gt;&lt;/p&gt;&#xD;&#xA;        &lt;/figcaption&gt;&#xD;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;Curiosity has recently led me down the road of extended reality (XR), a catch-all term encompassing: Augmented Reality (AR), Mixed Reality (MR) and Virtual Reality (VR). Development of XR experiences interestingly uses much of the same tooling used to create video games, often using game engines like Unity to build and leverage technology in order to create virtual environments.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>The Basics of Rocket Engine Plumbing</title>
       <link>https://dchipping.github.io/posts/rockets/</link>
       <pubDate>Wed, 25 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://dchipping.github.io/posts/rockets/</guid>
-      <description>An &amp;lsquo;artistic&amp;rsquo; rendition of engine cycles
-  As I&amp;rsquo;ve been reading more about software design patterns, I recalled a bit of reading I did during university on rocket engines cycles and how the topic could be thought of in similar terms to a design pattern. The concept of a program&amp;rsquo;s pattern referring to a well recognised way of solving a particular problem. Businesses typically like to implement them in their software designs due to the benefits:</description>
+      <description>&lt;figure&gt;&#xD;&#xA;    &lt;img src=&#34;https://dchipping.github.io/images/schematics.jpg&#34;&#xD;&#xA;         alt=&#34;An &amp;lsquo;artistic&amp;rsquo; rendition of engine cycles&#34;/&gt;&lt;figcaption&gt;&#xD;&#xA;            &lt;p&gt;An &amp;lsquo;artistic&amp;rsquo; rendition of engine cycles&lt;/p&gt;&#xD;&#xA;        &lt;/figcaption&gt;&#xD;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;As I&amp;rsquo;ve been reading more about &lt;a href=&#34;https://www.martinfowler.com/eaaCatalog/&#34;&gt;software design patterns&lt;/a&gt;, I recalled a bit of reading I did during university on rocket engines cycles and how the topic could be thought of in similar terms to a design pattern. The concept of a program&amp;rsquo;s &lt;em&gt;pattern&lt;/em&gt; referring to a well recognised way of solving a particular problem. Businesses typically like to implement them in their software designs due to the benefits:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>About</title>
       <link>https://dchipping.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://dchipping.github.io/about/</guid>
-      <description>Hello! I&amp;rsquo;m Daniel, nice to meet 👋
-This is my personal site, sporadically updated with a bits of writing on this and that. Writing is the best method I&amp;rsquo;ve found for promoting a deep understanding of a topic.
-Domain-wise, I&amp;rsquo;m interested in exploring the intersection of:
- Highly embodied hardware systems (systems that are highly aware of, and can finely interact with their surroundings/environment), Systems that use on-board computing, networking and software,  &amp;hellip;which can be combined to facilitate more intelligent and autonomous behaviour in real-world systems (e.</description>
+      <description>&lt;figure&gt;&#xD;&#xA;    &lt;img src=&#34;https://dchipping.github.io/images/arc.jpg&#34;/&gt;&#xD;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;Hello! I&amp;rsquo;m Daniel, nice to meet 👋&lt;/p&gt;&#xA;&lt;p&gt;This is my personal site, sporadically updated with a bits of writing on this and that. Writing is the best method I&amp;rsquo;ve found for promoting a deep understanding of a topic.&lt;/p&gt;&#xA;&lt;p&gt;Domain-wise, I&amp;rsquo;m interested in exploring the intersection of:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Highly &lt;strong&gt;embodied hardware systems&lt;/strong&gt; &lt;em&gt;(systems that are highly aware of, and can finely interact with their surroundings/environment)&lt;/em&gt;,&lt;/li&gt;&#xA;&lt;li&gt;Systems that use &lt;strong&gt;on-board computing, networking and software&lt;/strong&gt;,&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&amp;hellip;which can be combined to facilitate more intelligent and autonomous behaviour in real-world systems (e.g. manufacturing, vehicles, built environment).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Projects</title>
       <link>https://dchipping.github.io/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>https://dchipping.github.io/projects/</guid>
-      <description>LAHM Track (2022): Multi-object tracking algorithms (computer vision task) often maintain and update a &amp;lsquo;visual appearance history&amp;rsquo; encoding for each object being tracked, e.g. the colour of shirt someone is wearing. LAHM track provides a framework to train and deploy reinforcement learning agents optimised at this &amp;lsquo;maintain and update&amp;rsquo; process that can beat heuristic and greedy methods.
-  Blockism (2022): Created a social virtual reality (VR) building game where players work together to build structures and score points before time runs out.</description>
+      <description>&lt;figure&gt;&#xD;&#xA;    &lt;img src=&#34;https://dchipping.github.io/images/lahm-track.png&#34; width=&#34;800&#34;/&gt;&#xD;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/dchipping/lahm-track&#34;&gt;LAHM Track (2022)&lt;/a&gt;: Multi-object tracking algorithms (computer vision task) often maintain and update a &amp;lsquo;visual appearance history&amp;rsquo; encoding for each object being tracked, e.g. the colour of shirt someone is wearing. LAHM track provides a framework to train and deploy reinforcement learning agents optimised at this &amp;lsquo;maintain and update&amp;rsquo; process that can beat heuristic and greedy methods.&lt;/p&gt;&#xA;&lt;figure&gt;&#xD;&#xA;    &lt;img src=&#34;https://dchipping.github.io/images/blockism.png&#34; width=&#34;800&#34;/&gt;&#xD;&#xA;&lt;/figure&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/dchipping/blockism&#34;&gt;Blockism (2022)&lt;/a&gt;: Created a social virtual reality (VR) building game where players work together to build structures and score points before time runs out. The game is built within Unity, using UCL&amp;rsquo;s &lt;a href=&#34;https://github.com/UCL-VR/ubiq&#34;&gt;Ubiq&lt;/a&gt; library for networking utilities. Core challenges included integrating with Oculus APIs and designing the structure building engine.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>
