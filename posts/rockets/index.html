@@ -3,25 +3,19 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>The Basics of Rocket Engine Plumbing - Daniel Chipping</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	
-  <meta itemprop="name" content="The Basics of Rocket Engine Plumbing">
-  <meta itemprop="description" content="An overview of common &#39;patterns&#39; used in rocket engine design.">
-  <meta itemprop="datePublished" content="2020-03-25T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2020-03-25T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1911">
-  <meta itemprop="keywords" content="Propulsion,Space,Atoms"><meta property="og:url" content="https://dchipping.github.io/posts/rockets/">
-  <meta property="og:site_name" content="Daniel Chipping">
-  <meta property="og:title" content="The Basics of Rocket Engine Plumbing">
-  <meta property="og:description" content="An overview of common &#39;patterns&#39; used in rocket engine design.">
-  <meta property="og:locale" content="en_uk">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2020-03-25T00:00:00+00:00">
-    <meta property="article:modified_time" content="2020-03-25T00:00:00+00:00">
+	<meta itemprop="name" content="The Basics of Rocket Engine Plumbing">
+<meta itemprop="description" content="An overview of common &#39;patterns&#39; used in rocket engine design."><meta itemprop="datePublished" content="2020-03-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-03-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1911">
+<meta itemprop="keywords" content="" /><meta property="og:title" content="The Basics of Rocket Engine Plumbing" />
+<meta property="og:description" content="An overview of common &#39;patterns&#39; used in rocket engine design." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dchipping.github.io/posts/rockets/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-25T00:00:00+00:00" />
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Basics of Rocket Engine Plumbing">
-  <meta name="twitter:description" content="An overview of common &#39;patterns&#39; used in rocket engine design.">
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="The Basics of Rocket Engine Plumbing"/>
+<meta name="twitter:description" content="An overview of common &#39;patterns&#39; used in rocket engine design."/>
 <link href='https://fonts.googleapis.com/css?family=Playfair+Display:700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="screen" href="https://dchipping.github.io/css/normalize.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="https://dchipping.github.io/css/main.css" />
@@ -91,7 +85,7 @@
 			<div class="markdown">
 				<figure>
     <img src="/images/schematics.jpg"
-         alt="An &lsquo;artistic&rsquo; rendition of engine cycles"/><figcaption>
+         alt="An &amp;lsquo;artistic&amp;rsquo; rendition of engine cycles"/><figcaption>
             <p>An &lsquo;artistic&rsquo; rendition of engine cycles</p>
         </figcaption>
 </figure>
@@ -107,7 +101,7 @@
 <h2 id="do-rockets-really-have-design-patterns-as-well">Do rockets really have &lsquo;design patterns&rsquo; as well?</h2>
 <figure>
     <img src="https://live.staticflickr.com/65535/48129182836_048a580212_h.jpg"
-         alt="Falcon Heavy&rsquo;s roaring Merlin Engines"/><figcaption>
+         alt="Falcon Heavy&amp;rsquo;s roaring Merlin Engines"/><figcaption>
             <p>Falcon Heavy&rsquo;s roaring Merlin Engines
                     <a href="https://www.flickr.com/photos/spacex/48129182836/">(SpaceX)</a></p>
         </figcaption>
@@ -116,7 +110,8 @@
 <p>Key to utilising liquid fuel’s high energy density is an engine’s ability to consistently supply the combustion chamber with propellants at high pressures and high specific mass flow rates. Rocket engines supply themselves the energy required to do this via feed systems which can be thought of as an engines internal plumbing.</p>
 <blockquote>
 <p>&ldquo;Liquid propellant feed systems consist of piping, a series of valves, provisions for filling and usually also for removing (draining and flushing) the liquid propellants, filters, and control devices to initiate, stop, and regulate their flow and operation&rdquo;<!-- raw HTML omitted -->
-— <!-- raw HTML omitted -->George P. Sutton, Rocket Propulsion Elements<!-- raw HTML omitted --></p></blockquote>
+— <!-- raw HTML omitted -->George P. Sutton, Rocket Propulsion Elements<!-- raw HTML omitted --></p>
+</blockquote>
 <p>These systems are predominantly powered by either high-pressure gas or turbopumps but importantly there is no &lsquo;one size fits all’. Almost every engine has a different feed system, each of which provides its own design benefits and drawbacks, similar to the design pattern analogy drawn on earlier. So let&rsquo;s explore some of the most common feed systems and do a general comparison between them.</p>
 <h2 id="pressure-fed-engines">Pressure-fed Engines:</h2>
 <p>Pressure-fed engines are the simplest and most reliable feed systems in use. Fundamentally, these systems use a separate supply of very high-pressure gas, usually inert such as helium, to force propellant from its tanks into the combustion chamber. As a result, the plumbing required is simple typically comprising of a gas starting valve, a gas pressure regulator, propellant tanks, propellant valves, feed lines and a high-pressure gas tank.</p>
@@ -149,7 +144,7 @@
 <p>The gas is then discharged to the atmosphere separately from the combustion chamber. This has the benefit of allowing the turbine flow-path to run in parallel with the combustion chamber flow-path, separating the two functions. As a result, the complexity of the engine is greatly reduced as there is no need to deal with the counter pressure of the exhaust discharging into the combustion chamber.</p>
 <figure>
     <img src="/images/RD-107M.jpg"
-         alt="RD-107 gas-generator engine powers Russia&rsquo;s famous Soyuz rockets" width="400" height="550"/><figcaption>
+         alt="RD-107 gas-generator engine powers Russia&amp;rsquo;s famous Soyuz rockets" width="400" height="550"/><figcaption>
             <p>RD-107 gas-generator engine powers Russia&rsquo;s famous Soyuz rockets
                     <a href="http://engine.space/">(NPO Energomash)</a></p>
         </figcaption>
@@ -191,7 +186,7 @@
 <p>The final notable turbopump engine cycle is the staged combustion cycle, a closed cycle, high performance and high thrust engine cycle that comes with the trade-off of greatly increased complexity. Opposite to gas-generator cycles, the pre-burner and turbine flow-path is in series with the combustion chamber flow-path and thus experiences counter pressures of the exhaust being discharged into the combustion chamber.</p>
 <figure>
     <img src="https://live.staticflickr.com/65535/50703141068_0bdae2bdac_b.jpg"
-         alt="Starship fitted with SpaceX&rsquo;s powerful full-flow staged combustion Raptor Engines" width="700"/><figcaption>
+         alt="Starship fitted with SpaceX&amp;rsquo;s powerful full-flow staged combustion Raptor Engines" width="700"/><figcaption>
             <p>Starship fitted with SpaceX&rsquo;s powerful full-flow staged combustion Raptor Engines
                     <a href="https://www.flickr.com/photos/spacex/40126461851/">(SpaceX)</a></p>
         </figcaption>
